@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Shut The Box</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="shut_the_box.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Shut The Box</h1>
+    </header>
+
+
+    <main>
+      <!--Rules -->
+      <section>
+        <h2>The Rules</h2>
+        
+        <ol type="i">
+          <li>Each turn, you role the dice(or die) and select 1 or more boxes which sum to the value of your roll.</li>
+          <li>You will not be allowed to pick the boxes which you choose on subsequent turns.</li>
+          <li>When the sum of the boxes which are left is less than or equal to 6, you will only roll a single die.</li>
+          <li>When you cannot make a move or you give up, the sum of the boxes which are left gives your score.</li>
+          <li>Lower scores are better and a score of 0 is called "shutting the box".</li>
+        </ol>
+
+      </section>
+
+      <!--Roll Dice -->
+      <section>
+        <h2>Dice roll</h2>
+
+        <fieldset>
+          <input id="roll_button" type="button" value="Roll dice" onclick="roll_dice();">
+          <span id="result">Result: </span>
+
+        </fieldset>
+
+      </section>
+
+      <!--Box selection -->
+      <section>
+        <h2>Box selection</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td><input id='c0' type="checkbox"></td>
+              <td><input id='c1' type="checkbox"></td>
+              <td><input id='c2' type="checkbox"></td>
+              <td><input id='c3' type="checkbox"></td>
+              <td><input id='c4' type="checkbox"></td>
+              <td><input id='c5' type="checkbox"></td>
+              <td><input id='c6' type="checkbox"></td>
+              <td><input id='c7' type="checkbox"></td>
+              <td><input id='c8' type="checkbox"></td>
+            </tr>
+          </tbody>
+          
+        </table>
+        
+        <fieldset>
+        <input id="submit_button" type="button" value="Submit box selection" onclick="check_submission();">
+        <input type="button" value="I give up / I can’t make a valid move" onclick="finish();">
+        </fieldset>
+
+
+      </section>
+
+
+    </main>
+
+
+    <footer>
+      <hr>
+      <small>
+        &copy; Rita Dang, 2021
+      </small>
+    </footer>
+
+
+  </body>
+
+
+</html>
